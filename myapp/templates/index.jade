@@ -1,0 +1,12 @@
+h1 SNS
+
+script(src="/assets/bundle.js")
+
+if not login
+    a(href="/login") ログイン
+    a(href="/register") 登録
+else
+    a(href="/logout") ログアウト
+    app-postbox
+h2 Public Timeline
+app-timeline
