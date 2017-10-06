@@ -7,7 +7,6 @@ from datetime import datetime
 def postsList():
     posts = models.Post.query.order_by(-models.Post.createdAt).all()
     posts = list(map(lambda x:x.toDict(), posts))
-    print(posts)
     return jsonify(posts)
 
 @app.route('/posts',methods=["POST"])
